@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    background-color: aqua;
+    font-size: 5rem;
+    justify-content: center;
+}
+
+.counter {
+    display: flex;
+    margin-top: 5rem;
+    justify-content: space-around;
+    
+}
+
+.number {
+    font-size: 2rem;
+    color: red;
+}
+
+
+.poopCtn {
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+}
+
+button {
+    width: 5rem;
+    height: 2rem;
+    color:white;
+    background-color: hotpink;
+    font-size: 1.5rem;
+}
