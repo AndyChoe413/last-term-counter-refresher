@@ -1,8 +1,21 @@
 let counter = 0;
 
+function poopComponent() {
+    let poopCtn = document.createElement('div')
+    poopCtn.innerHTML = `
+        < div class="poop-div" >
+            <img src="https://elephant.art/wp-content/uploads/2019/11/poop-emoji.jpg">
+        </div >
+    `
+    return poopCtn
+}
+
+const poopCtnElement = document.querySelector('.poopCtn')
+
 const countChangeHandler = () => {
     counterLogger()
     renderCount()
+
 }
 
 const counterLogger = () => {
@@ -11,11 +24,13 @@ const counterLogger = () => {
 const remove = () => {
     counter--
     countChangeHandler()
+    deletePoop()
 }
 
 const add = () => {
     counter++
     countChangeHandler()
+    poopCtnElement.appendChild(poopComponent())
 }
 
 const renderCount = () => {
@@ -31,17 +46,8 @@ addBtn.addEventListener('click', add)
 const counterH1 = document.querySelector('#counterText')
 
 
-// function poopRender() {
-
-//     const poopImg = document.createElement('DIV')
-//     poopImg.innerHtml = '
-        
-//     < div class="poopCtn" >
-//         <img src="https://elephant.art/wp-content/uploads/2019/11/poop-emoji.jpg">
-//     </div >
-
-//         ';
-    
-//     return poopImg;
-// }
+function deletePoop() {
+    const section = document.querySelector('.poopCtn')
+    section.removeChild(section.lastElementChild)
+}
 
